@@ -1,11 +1,11 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct {{ name }}View: View {
-  @ObservedObject var viewStore: ViewStoreOf<{{ name }}Reducer>
+struct CountView: View {
+  @ObservedObject var viewStore: ViewStoreOf<CountReducer>
 
-  init(store: StoreOf<{{ name }}Reducer>) {
-    self.viewStore = ViewStoreOf<{{ name }}Reducer>(store, observe: { $0 })
+  init(store: StoreOf<CountReducer>) {
+    self.viewStore = ViewStoreOf<CountReducer>(store, observe: { $0 })
   }
 
   var body: some View {
@@ -26,4 +26,3 @@ struct {{ name }}View: View {
     }
   }
 }
-

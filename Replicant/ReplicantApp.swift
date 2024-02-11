@@ -12,7 +12,7 @@ import ReplicantPackage
 struct ReplicantApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      ReplicantPackageView()
     }
   }
 }
