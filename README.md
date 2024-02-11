@@ -1,4 +1,4 @@
-# SpmSwiftUITemplate
+# Replicant
 
 SwiftUI Simple lightweight template.
 

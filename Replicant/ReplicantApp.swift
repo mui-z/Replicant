@@ -1,15 +1,15 @@
 //
-//  SpmSwiftUITemplateApp.swift
-//  SpmSwiftUITemplate
+//  ReplicantApp.swift
+//  Replicant
 //
 //  Created by osushi on 2022/03/05.
 //
 
 import SwiftUI
-import SpmSwiftUITemplatePackage
+import ReplicantPackage
 
 @main
-struct SpmSwiftUITemplateApp: App {
+struct ReplicantApp: App {
   var body: some Scene {
     WindowGroup {
       ContentView()

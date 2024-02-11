@@ -1,11 +1,11 @@
 import XCTest
-@testable import SpmSwiftUITemplatePackage
+@testable import ReplicantPackage
 
-final class SpmSwiftUITemplatePackageTests: XCTestCase {
+final class ReplicantPackageTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(SpmSwiftUITemplatePackage().text, "Hello, World!")
+        XCTAssertEqual(ReplicantPackage().text, "Hello, World!")
     }
 }

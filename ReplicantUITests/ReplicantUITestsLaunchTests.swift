@@ -1,13 +1,13 @@
 //
-//  SpmSwiftUITemplateUITestsLaunchTests.swift
-//  SpmSwiftUITemplateUITests
+//  ReplicantUITestsLaunchTests.swift
+//  ReplicantUITests
 //
 //  Created by osushi on 2022/03/05.
 //
 
 import XCTest
 
-class SpmSwiftUITemplateUITestsLaunchTests: XCTestCase {
+class ReplicantUITestsLaunchTests: XCTestCase {
   
   override class var runsForEachTargetApplicationUIConfiguration: Bool {
     true
