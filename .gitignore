@@ -125,3 +125,6 @@ DerivedData/
 
 
 .DS_Store
+Development.xcconfig
+APIKey.swift
+
