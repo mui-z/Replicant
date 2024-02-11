@@ -16,6 +16,7 @@ let package = Package(
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.7.3"),
+    .package(url: "git@github.com:johnpatrickmorgan/TCACoordinators.git", from: "0.8.0"),
     .package(url: "git@github.com:petitstrawberry/MisskeyAPIKit.git", from: "0.2.0"),
   ],
   targets: [
@@ -31,7 +32,8 @@ let package = Package(
         .product(
           name: "MisskeyAPIKit",
           package: "MisskeyAPIKit"
-        )
+        ),
+        .product(name: "TCACoordinators", package: "TCACoordinators")
       ]),
     .testTarget(
       name: "ReplicantPackageTests",

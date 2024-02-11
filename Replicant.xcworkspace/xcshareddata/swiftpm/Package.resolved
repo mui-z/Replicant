@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "flowstacks",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/johnpatrickmorgan/FlowStacks",
+      "state" : {
+        "revision" : "468de8179d68f9e150ffafcb4574dee52dfa3976",
+        "version" : "0.4.0"
+      }
+    },
+    {
       "identity" : "misskeyapikit",
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:petitstrawberry/MisskeyAPIKit.git",
@@ -124,6 +133,15 @@
       "state" : {
         "revision" : "d9e72f3083c08375794afa216fb2f89c0114f303",
         "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "tcacoordinators",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:johnpatrickmorgan/TCACoordinators.git",
+      "state" : {
+        "revision" : "c0060666c67e431268bd6b9897da2787f563a21b",
+        "version" : "0.8.0"
       }
     },
     {
