@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		751B0CDD27D384730011BA70 /* ReplicantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B0CDC27D384730011BA70 /* ReplicantTests.swift */; };
 		751B0CE727D384730011BA70 /* ReplicantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B0CE627D384730011BA70 /* ReplicantUITests.swift */; };
 		751B0CE927D384730011BA70 /* ReplicantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B0CE827D384730011BA70 /* ReplicantUITestsLaunchTests.swift */; };
-		751B0CF927D386660011BA70 /* ReplicantPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 751B0CF827D386660011BA70 /* ReplicantPackage */; };
+		75DA0A602B79450000C2938F /* ReplicantPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 75DA0A5F2B79450000C2938F /* ReplicantPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751B0CF927D386660011BA70 /* ReplicantPackage in Frameworks */,
+				75DA0A602B79450000C2938F /* ReplicantPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +153,7 @@
 			);
 			name = Replicant;
 			packageProductDependencies = (
-				751B0CF827D386660011BA70 /* ReplicantPackage */,
+				75DA0A5F2B79450000C2938F /* ReplicantPackage */,
 			);
 			productName = Replicant;
 			productReference = 751B0CC827D384710011BA70 /* Replicant.app */;
@@ -203,7 +203,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					751B0CC727D384710011BA70 = {
 						CreatedOnToolsVersion = 13.1;
@@ -227,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 751B0CBF27D384710011BA70;
+			packageReferences = (
+				75EFDB232B7942A800BAFD29 /* XCLocalSwiftPackageReference "ReplicantPackage" */,
+			);
 			productRefGroup = 751B0CC927D384710011BA70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -343,6 +346,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -404,6 +408,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -437,8 +442,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,8 +473,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -619,8 +622,15 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		75EFDB232B7942A800BAFD29 /* XCLocalSwiftPackageReference "ReplicantPackage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ReplicantPackage;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		751B0CF827D386660011BA70 /* ReplicantPackage */ = {
+		75DA0A5F2B79450000C2938F /* ReplicantPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReplicantPackage;
 		};
