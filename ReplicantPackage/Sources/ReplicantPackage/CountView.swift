@@ -2,27 +2,27 @@ import ComposableArchitecture
 import SwiftUI
 
 struct CountView: View {
-    @ObservedObject var viewStore: ViewStoreOf<CountReducer>
+  @ObservedObject var viewStore: ViewStoreOf<CountReducer>
 
-    init(store: StoreOf<CountReducer>) {
-        viewStore = ViewStoreOf<CountReducer>(store, observe: { $0 })
-    }
+  init(store: StoreOf<CountReducer>) {
+    viewStore = ViewStoreOf<CountReducer>(store, observe: { $0 })
+  }
 
-    var body: some View {
-        VStack {
-            Text(viewStore.count.description)
-            HStack {
-                Button(action: {
-                    viewStore.send(.decrement)
-                }, label: {
-                    Text("-")
-                })
-                Button(action: {
-                    viewStore.send(.increment)
-                }, label: {
-                    Text("+")
-                })
-            }
-        }
+  var body: some View {
+    VStack {
+      Text(viewStore.count.description)
+      HStack {
+        Button(action: {
+          viewStore.send(.decrement)
+        }, label: {
+          Text("-")
+        })
+        Button(action: {
+          viewStore.send(.increment)
+        }, label: {
+          Text("+")
+        })
+      }
     }
+  }
 }

@@ -10,9 +10,9 @@ import SwiftUI
 
 @main
 struct ReplicantApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ReplicantPackageView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ReplicantPackageView()
     }
+  }
 }
