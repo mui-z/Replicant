@@ -12,8 +12,10 @@ public struct ReplicantPackageView: View {
     public init() {}
 
     public var body: some View {
-        CountView(store: Store(initialState: CountReducer.State(count: 0)) {
-            CountReducer()
-        })
+        MainTabView(
+            store: Store(initialState: MainTabCoordinator.State()) {
+                MainTabCoordinator()
+            }
+        )
     }
 }

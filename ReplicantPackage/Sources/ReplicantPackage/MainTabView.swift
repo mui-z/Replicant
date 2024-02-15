@@ -12,39 +12,49 @@ import ComposableArchitecture
 import TCACoordinators
 
 struct MainTabView: View {
-    let store: StoreOf<MainTabReducer>
+    let store: StoreOf<MainTabCoordinator>
+    @ObservedObject var viewStore: ViewStoreOf<MainTabCoordinator>
 
-    @ObservedObject var viewStore: ViewStoreOf<MainTabReducer>
+    init(store: StoreOf<MainTabCoordinator>) {
+        self.store = store
+        viewStore = ViewStoreOf<MainTabCoordinator>(store, observe: { $0 })
+    }
 
     var body: some View {
-        TabView(selection: viewStore.binding(send: MainTabReducer.Action.selectedTabChanged($0))) {
+        TabView(selection: viewStore.binding(get: { $0.selectedTab }, send: MainTabCoordinator.Action.selectedTabChanged)) {
             AppCoordinatorView(
                 coordinator: store.scope(
                     state: \.timelineTab,
-                    action: { .timelineTab($0) }
+                    action: \.timelineTab
                 )
             )
+            .tabItem { Text("🏠") }
+            .tag(MainTabCoordinator.Tab.timeline)
         }
     }
 }
 
-public enum Tabs: Int, CaseIterable {
-    case timeline
-}
-
 @Reducer
-struct MainTabReducer {
+struct MainTabCoordinator {
+    enum Tab: Hashable {
+        case timeline
+    }
+
     struct State: Equatable {
         var timelineTab = AppCoordinator.State.rootTimelineState
-        var selectedTab: Tabs = .timeline
+        var selectedTab: Tab = .timeline
     }
 
     enum Action {
         case timelineTab(AppCoordinator.Action)
-        case selectedTabChanged(Tabs)
+        case selectedTabChanged(Tab)
     }
 
     var body: some ReducerOf<Self> {
+        Scope(state: \.timelineTab, action: /Action.timelineTab) {
+            AppCoordinator()
+        }
+
         Reduce<State, Action> { state, action in
             switch action {
             case let .selectedTabChanged(tab):
@@ -53,10 +63,6 @@ struct MainTabReducer {
             case .timelineTab:
                 return .none
             }
-        }
-
-        Scope(state: \.timelineTab, action: /Action.timelineTab) {
-            AppCoordinator()
         }
     }
 }
