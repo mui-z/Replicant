@@ -2,6 +2,7 @@ import ComposableArchitecture
 
 @Reducer
 struct NotificationReducer {
+  @ObservableState
   struct State: Equatable {
     var count: Int
   }

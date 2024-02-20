@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "ReplicantPackage",
-  platforms: [.iOS(.v16)],
+  platforms: [.iOS(.v17)],
   products: [
     // Products define the executables and libraries a package produces, and make them visible to other packages.
     .library(
@@ -16,8 +16,7 @@ let package = Package(
   dependencies: [
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
-    .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.7.3"),
-    .package(url: "git@github.com:johnpatrickmorgan/TCACoordinators.git", from: "0.8.0"),
+    .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.8.2"),
     .package(url: "git@github.com:petitstrawberry/MisskeyAPIKit.git", from: "0.2.0"),
   ],
   targets: [
@@ -34,7 +33,6 @@ let package = Package(
           name: "MisskeyAPIKit",
           package: "MisskeyAPIKit"
         ),
-        .product(name: "TCACoordinators", package: "TCACoordinators"),
       ]
     ),
     .testTarget(

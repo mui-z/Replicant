@@ -19,15 +19,6 @@
       }
     },
     {
-      "identity" : "flowstacks",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/johnpatrickmorgan/FlowStacks",
-      "state" : {
-        "revision" : "468de8179d68f9e150ffafcb4574dee52dfa3976",
-        "version" : "0.4.0"
-      }
-    },
-    {
       "identity" : "misskeyapikit",
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:petitstrawberry/MisskeyAPIKit.git",
@@ -68,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-composable-architecture",
       "state" : {
-        "revision" : "f815e76b520aacfad4ff35c7e1f036f8add6f4b4",
-        "version" : "1.7.3"
+        "revision" : "856f9b8d82f6851b7f61ec4c5ce9e4c18ebbdb45",
+        "version" : "1.8.2"
       }
     },
     {
@@ -133,15 +124,6 @@
       "state" : {
         "revision" : "d9e72f3083c08375794afa216fb2f89c0114f303",
         "version" : "1.2.1"
-      }
-    },
-    {
-      "identity" : "tcacoordinators",
-      "kind" : "remoteSourceControl",
-      "location" : "git@github.com:johnpatrickmorgan/TCACoordinators.git",
-      "state" : {
-        "revision" : "c0060666c67e431268bd6b9897da2787f563a21b",
-        "version" : "0.8.0"
       }
     },
     {

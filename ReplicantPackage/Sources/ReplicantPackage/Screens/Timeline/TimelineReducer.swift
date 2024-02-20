@@ -2,6 +2,7 @@ import ComposableArchitecture
 
 @Reducer
 public struct TimelineReducer {
+  @ObservableState
   public struct State: Equatable {
     var count: Int
   }
