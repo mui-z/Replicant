@@ -11,7 +11,6 @@ struct NoteView: View {
   var body: some View {
     HStack(alignment: .top, spacing: 15) {
       Icon()
-
       VStack(alignment: .leading, spacing: 10) {
         NameBar()
         NoteText()
@@ -20,8 +19,4 @@ struct NoteView: View {
       .frame(maxWidth: .infinity, alignment: .leading)
     }
   }
-}
-
-#Preview {
-  NoteView()
 }

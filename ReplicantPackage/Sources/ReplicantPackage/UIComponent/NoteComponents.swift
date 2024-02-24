@@ -47,26 +47,24 @@ struct NoteReactionBar: View {
   }
 
   private func withCountButton(systemName: String, count: Int) -> some View {
-    Button {
-      print("pushed")
-    } label: {
-      HStack(spacing: 2) {
-        Image(systemName: systemName)
-          .imageScale(.small)
-        Text(count.description)
-          .font(.caption)
-      }
-      .frame(width: width, alignment: .leading)
+    HStack(spacing: 2) {
+      Image(systemName: systemName)
+        .imageScale(.small)
+      Text(count.description)
+        .font(.caption)
+    }
+    .frame(width: width, alignment: .leading)
+    .onTapGesture {
+      print("with count button tapped")
     }
   }
 
   private func button(systemName: String) -> some View {
-    Button {
-      print("normal button")
-    } label: {
-      Image(systemName: systemName)
-        .imageScale(.small)
-        .frame(width: width, alignment: .leading)
-    }
+    Image(systemName: systemName)
+      .imageScale(.small)
+      .frame(width: width, alignment: .leading)
+      .onTapGesture {
+        print("button tapped")
+      }
   }
 }
