@@ -18,7 +18,7 @@ struct MainTabView: View {
       }
       .tag(MainTabReducer.Tab.timeline)
       .tabItem {
-        Text("timeline")
+        Image(systemName: "house")
       }
 
       NavigationStack {
@@ -26,7 +26,7 @@ struct MainTabView: View {
       }
       .tag(MainTabReducer.Tab.notification)
       .tabItem {
-        Text("notification")
+        Image(systemName: "bell")
       }
 
       NavigationStack {
@@ -34,7 +34,7 @@ struct MainTabView: View {
       }
       .tag(MainTabReducer.Tab.settings)
       .tabItem {
-        Text("settings")
+        Image(systemName: "gearshape")
       }
     }
   }

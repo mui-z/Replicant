@@ -9,20 +9,19 @@ struct TimelineView: View {
   }
 
   var body: some View {
-    VStack {
-      Text(viewStore.count.description)
-      HStack {
-        Button(action: {
-          viewStore.send(.decrement)
-        }, label: {
-          Text("-")
-        })
-        Button(action: {
-          viewStore.send(.increment)
-        }, label: {
-          Text("+")
-        })
-      }
+    List {
+      NoteView()
+        .padding(.top, 3)
+      NoteView()
+        .padding(.top, 3)
+      NoteView()
+        .padding(.top, 3)
+      NoteView()
+        .padding(.top, 3)
+      NoteView()
+        .padding(.top, 3)
+      NoteView()
+        .padding(.top, 3)
     }
   }
 }
