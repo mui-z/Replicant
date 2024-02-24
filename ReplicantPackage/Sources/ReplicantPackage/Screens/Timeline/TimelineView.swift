@@ -10,18 +10,13 @@ struct TimelineView: View {
 
   var body: some View {
     List {
-      NoteView()
-        .padding(.top, 3)
-      NoteView()
-        .padding(.top, 3)
-      NoteView()
-        .padding(.top, 3)
-      NoteView()
-        .padding(.top, 3)
-      NoteView()
-        .padding(.top, 3)
-      NoteView()
-        .padding(.top, 3)
+      ForEach(viewStore.notes) { note in
+        NoteView(note: note)
+          .padding(.top, 3)
+      }
+    }
+    .onAppear {
+      viewStore.send(.getHomeNotes)
     }
   }
 }

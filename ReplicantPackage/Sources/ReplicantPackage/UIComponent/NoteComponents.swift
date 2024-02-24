@@ -5,30 +5,44 @@
 //  Created by osushi on 2024/02/24.
 //
 
+import MisskeyAPIKit
 import SwiftUI
 
 struct Icon: View {
   let size = 40.0
+  let url: String
+
   var body: some View {
-    Circle()
-      .frame(width: size, height: size)
-      .foregroundStyle(.cyan)
+    AsyncImage(url: URL(string: url), scale: size) { image in
+      image
+        .resizable()
+        .aspectRatio(contentMode: .fill)
+        .frame(width: size, height: size)
+        .clipShape(Circle())
+    } placeholder: {
+      Circle()
+        .frame(width: size, height: size)
+        .foregroundStyle(.cyan)
+    }
   }
 }
 
 struct NameBar: View {
+  let name: String
+  let id: String
   var body: some View {
     HStack(spacing: 0) {
-      Text("name")
-      Text("@id")
+      Text(name)
+      Text("@\(id)")
         .foregroundStyle(.gray)
     }
   }
 }
 
 struct NoteText: View {
+  let text: String
   var body: some View {
-    Text("hello world\ndsafasf\ndfafjdajfkl")
+    Text(text)
       .multilineTextAlignment(.leading)
       .font(.callout)
   }
@@ -36,10 +50,12 @@ struct NoteText: View {
 
 struct NoteReactionBar: View {
   let width = 40.0
+  let note: Note
+
   var body: some View {
     HStack(spacing: 20) {
-      withCountButton(systemName: "arrow.uturn.left", count: 12)
-      withCountButton(systemName: "arrow.2.squarepath", count: 12)
+      withCountButton(systemName: "arrow.uturn.left", count: note.repliesCount)
+      withCountButton(systemName: "arrow.2.squarepath", count: note.renoteCount)
       button(systemName: "plus")
       button(systemName: "ellipsis")
     }
@@ -50,8 +66,11 @@ struct NoteReactionBar: View {
     HStack(spacing: 2) {
       Image(systemName: systemName)
         .imageScale(.small)
-      Text(count.description)
-        .font(.caption)
+
+      if count > 0 {
+        Text(count.description)
+          .font(.caption)
+      }
     }
     .frame(width: width, alignment: .leading)
     .onTapGesture {

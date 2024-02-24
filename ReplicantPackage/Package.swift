@@ -18,6 +18,7 @@ let package = Package(
     // .package(url: /* package url */, from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.8.2"),
     .package(url: "git@github.com:petitstrawberry/MisskeyAPIKit.git", from: "0.2.0"),
+    .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -32,6 +33,10 @@ let package = Package(
         .product(
           name: "MisskeyAPIKit",
           package: "MisskeyAPIKit"
+        ),
+        .product(
+          name: "Logging",
+          package: "swift-log"
         ),
       ]
     ),
