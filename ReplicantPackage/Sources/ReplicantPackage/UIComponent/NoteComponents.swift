@@ -4,9 +4,10 @@
 //
 //  Created by osushi on 2024/02/24.
 //
+import Logging
+import SwiftUI
 
 import MisskeyAPIKit
-import SwiftUI
 
 struct Icon: View {
   let size = 40.0
@@ -40,9 +41,9 @@ struct NameBar: View {
 }
 
 struct NoteText: View {
-  let text: String
+  let text: String?
   var body: some View {
-    Text(text)
+    Text(text ?? "")
       .multilineTextAlignment(.leading)
       .font(.callout)
   }
@@ -74,7 +75,7 @@ struct NoteReactionBar: View {
     }
     .frame(width: width, alignment: .leading)
     .onTapGesture {
-      print("with count button tapped")
+      logger.info("with count button tapped")
     }
   }
 
@@ -83,7 +84,7 @@ struct NoteReactionBar: View {
       .imageScale(.small)
       .frame(width: width, alignment: .leading)
       .onTapGesture {
-        print("button tapped")
+        logger.info("button tapped")
       }
   }
 }

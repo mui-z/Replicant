@@ -15,7 +15,7 @@ struct NoteView: View {
       Icon(url: note.user.avatarUrl)
       VStack(alignment: .leading, spacing: 10) {
         NameBar(name: note.user.name ?? note.user.username, id: note.user.username)
-        NoteText(text: note.text ?? "")
+        NoteText(text: note.text)
         NoteReactionBar(note: note)
       }
       .frame(maxWidth: .infinity, alignment: .leading)
