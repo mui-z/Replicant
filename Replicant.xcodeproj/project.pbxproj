@@ -13,6 +13,7 @@
 		751B0CDD27D384730011BA70 /* ReplicantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B0CDC27D384730011BA70 /* ReplicantTests.swift */; };
 		751B0CE727D384730011BA70 /* ReplicantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B0CE627D384730011BA70 /* ReplicantUITests.swift */; };
 		751B0CE927D384730011BA70 /* ReplicantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B0CE827D384730011BA70 /* ReplicantUITestsLaunchTests.swift */; };
+		75D9F3A32B89C59D00EC3E0E /* ReplicantPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 75D9F3A22B89C59D00EC3E0E /* ReplicantPackage */; };
 		75DA0A602B79450000C2938F /* ReplicantPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 75DA0A5F2B79450000C2938F /* ReplicantPackage */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D9F3A32B89C59D00EC3E0E /* ReplicantPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +175,9 @@
 				751B0CDA27D384730011BA70 /* PBXTargetDependency */,
 			);
 			name = ReplicantTests;
+			packageProductDependencies = (
+				75D9F3A22B89C59D00EC3E0E /* ReplicantPackage */,
+			);
 			productName = ReplicantTests;
 			productReference = 751B0CD827D384730011BA70 /* ReplicantTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -497,7 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,6 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,6 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -630,6 +637,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		75D9F3A22B89C59D00EC3E0E /* ReplicantPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReplicantPackage;
+		};
 		75DA0A5F2B79450000C2938F /* ReplicantPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReplicantPackage;

@@ -1,5 +1,5 @@
 //
-//  Note.swift
+//  NoteView.swift
 //
 //
 //  Created by osushi on 2024/02/24.

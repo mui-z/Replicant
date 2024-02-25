@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Replicant.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../Replicant.xctestplan">
+   </FileRef>
 </Workspace>
