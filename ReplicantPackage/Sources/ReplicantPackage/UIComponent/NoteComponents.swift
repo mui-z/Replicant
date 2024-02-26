@@ -7,8 +7,6 @@
 import Logging
 import SwiftUI
 
-import MisskeyAPIKit
-
 struct Icon: View {
   let size = 40.0
   let url: String
@@ -51,12 +49,12 @@ struct NoteText: View {
 
 struct NoteReactionBar: View {
   let width = 40.0
-  let note: Note
+//  let note: Note
 
   var body: some View {
     HStack(spacing: 20) {
-      withCountButton(systemName: "arrow.uturn.left", count: note.repliesCount)
-      withCountButton(systemName: "arrow.2.squarepath", count: note.renoteCount)
+      withCountButton(systemName: "arrow.uturn.left", count: 0)
+      withCountButton(systemName: "arrow.2.squarepath", count: 0)
       button(systemName: "plus")
       button(systemName: "ellipsis")
     }

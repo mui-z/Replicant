@@ -17,7 +17,7 @@ let package = Package(
     // Dependencies declare other packages that this package depends on.
     // .package(url: /* package url */, from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.8.2"),
-    .package(url: "git@github.com:petitstrawberry/MisskeyAPIKit.git", from: "0.2.0"),
+    .package(url: "git@github.com:nnabeyang/swift-atproto.git", branch: "main"),
     .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
   ],
   targets: [
@@ -31,8 +31,8 @@ let package = Package(
           package: "swift-composable-architecture"
         ),
         .product(
-          name: "MisskeyAPIKit",
-          package: "MisskeyAPIKit"
+          name: "ATProto",
+          package: "swift-atproto"
         ),
         .product(
           name: "Logging",

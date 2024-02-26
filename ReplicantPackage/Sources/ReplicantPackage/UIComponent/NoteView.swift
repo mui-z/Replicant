@@ -5,18 +5,16 @@
 //  Created by osushi on 2024/02/24.
 //
 
-import MisskeyAPIKit
 import SwiftUI
 
 struct NoteView: View {
-  let note: Note
   var body: some View {
     HStack(alignment: .top, spacing: 15) {
-      Icon(url: note.user.avatarUrl)
+      Icon(url: "")
       VStack(alignment: .leading, spacing: 10) {
-        NameBar(name: note.user.name ?? note.user.username, id: note.user.username)
-        NoteText(text: note.text)
-        NoteReactionBar(note: note)
+        NameBar(name: "name", id: UUID().uuidString)
+        NoteText(text: "text")
+        NoteReactionBar()
       }
       .frame(maxWidth: .infinity, alignment: .leading)
     }

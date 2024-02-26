@@ -1,5 +1,8 @@
-import ComposableArchitecture
+import Logging
 import SwiftUI
+
+import ATProtoKit
+import ComposableArchitecture
 
 struct TimelineView: View {
   @ObservedObject var viewStore: ViewStoreOf<TimelineReducer>
@@ -10,13 +13,10 @@ struct TimelineView: View {
 
   var body: some View {
     List {
-      ForEach(viewStore.notes) { note in
-        NoteView(note: note)
-          .padding(.top, 3)
+      Button("get client") {
+        viewStore.send(.getFollowingTimeline)
       }
     }
-    .onAppear {
-      viewStore.send(.getHomeNotes)
-    }
+    .onAppear {}
   }
 }
